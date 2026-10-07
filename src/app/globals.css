@@ -1,26 +1,230 @@
 @import "tailwindcss";
 
+@theme {
+  --font-serif: var(--font-serif), "EB Garamond", Garamond, Georgia, serif;
+  --font-sans: var(--font-sans), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-manrope: var(--font-manrope), "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-brand-dark: #0B3B32;
+  --color-brand-darker: #04241E;
+  --color-brand-primary: #0B4D42;
+  --color-brand-emerald: #10B981;
+  --color-brand-accent: #059669;
+  --color-brand-light: #E8F6F1;
+  --color-brand-soft: #F4FAF8;
+  --color-brand-mint: #D1FAE5;
+  --color-brand-border: #D3ECE4;
+
+  --color-siglo-bg: #F5F8F6;
+  --color-siglo-text: #0F292F;
+  --color-siglo-petroleum: #0C4E5B;
+  --color-siglo-botanical: #235347;
+  --color-siglo-sage: #D5E5DD;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFFFF;
+  --foreground: #111111;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans), "Inter", system-ui, -apple-system, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FFFFFF;
+  color: #111111;
+  font-family: var(--font-sans), "Inter", system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+.font-serif {
+  font-family: var(--font-serif), 'EB Garamond', Garamond, 'Adobe Garamond Pro', Georgia, Cambria, serif !important;
+}
+
+.font-sans {
+  font-family: var(--font-sans), 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-manrope {
+  font-family: var(--font-manrope), 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-jakarta,
+.font-jakarta *:not(.font-serif) {
+  font-family: var(--font-plus-jakarta), 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+}
+
+/* Organic curves & Equipment Masks */
+.curved-hero-mask {
+  border-radius: 40% 60% 60% 40% / 40% 50% 50% 60%;
+}
+
+.organic-border {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.organic-equipment-mask {
+  border-top-left-radius: 110px;
+  border-top-right-radius: 28px;
+  border-bottom-right-radius: 130px;
+  border-bottom-left-radius: 28px;
+}
+
+@media (max-width: 640px) {
+  .organic-equipment-mask {
+    border-top-left-radius: 64px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 76px;
+    border-bottom-left-radius: 20px;
+  }
+}
+
+/* Animations & Motion */
+@keyframes motionFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes motionFadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes motionSlideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes motionSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes motionImageReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-motion-fade-up {
+  animation: motionFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-motion-image {
+  animation: motionImageReveal 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ScrollReveal Utility Classes with GPU Acceleration */
+.reveal-base {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-up {
+  transform: translate3d(0, 32px, 0);
+}
+
+.reveal-down {
+  transform: translate3d(0, -28px, 0);
+}
+
+.reveal-left {
+  transform: translate3d(-36px, 0, 0);
+}
+
+.reveal-right {
+  transform: translate3d(36px, 0, 0);
+}
+
+.reveal-scale {
+  transform: scale3d(0.94, 0.94, 1) translate3d(0, 20px, 0);
+}
+
+.reveal-fade {
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal-visible {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1) !important;
+}
+
+/* Accessible reduced motion override */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-base,
+  .reveal-up,
+  .reveal-down,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-fade {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+.stagger-1 { animation-delay: 70ms; transition-delay: 70ms; }
+.stagger-2 { animation-delay: 140ms; transition-delay: 140ms; }
+.stagger-3 { animation-delay: 210ms; transition-delay: 210ms; }
+.stagger-4 { animation-delay: 280ms; transition-delay: 280ms; }
+.stagger-5 { animation-delay: 350ms; transition-delay: 350ms; }
+.stagger-6 { animation-delay: 420ms; transition-delay: 420ms; }
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #0b4d42;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #07362e;
+}
+
+/* Monochromatic Sage/Emerald Map Filter for Google Maps Embed */
+.map-monochrome-emerald {
+  filter: grayscale(80%) contrast(1.1) brightness(1.02) sepia(18%) hue-rotate(85deg);
+  transition: filter 0.5s ease;
+}
+.map-monochrome-emerald:hover {
+  filter: grayscale(40%) contrast(1.05) brightness(1.01) sepia(10%) hue-rotate(85deg);
 }

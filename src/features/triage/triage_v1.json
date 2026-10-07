@@ -1,0 +1,134 @@
+{
+  "version": "1.0-DEMO",
+  "approved_by": null,
+  "approved_at": null,
+  "clinical_status": "PENDIENTE DE VALIDACIÓN CLÍNICA",
+  "disclaimer_initial": "Este cuestionario recopila información preliminar para tu cita en el Centro Terapéutico Siglo XXI (Chachapoyas). No constituye un diagnóstico médico ni descarta patologías. Si presentas una urgencia médica, acude inmediatamente a un centro de salud.",
+  "questions": [
+    {
+      "id": "q_seguridad_demo",
+      "order": 1,
+      "question_text": "Filtro de Orientación Inicial (Contenido de prueba para el motor de seguridad)",
+      "helper_text": "El contenido clínico final de esta pregunta debe ser definido y aprobado por el profesional responsable del centro.",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "opt_sin_alarma",
+          "label": "No presento síntomas de inicio brusco severo ni pérdida súbita de fuerza",
+          "description": "Molestia musculoesquelética común o progresiva.",
+          "es_criterio_alarma": false,
+          "category": "general"
+        },
+        {
+          "id": "opt_con_alarma_demo",
+          "label": "Presento síntomas de inicio súbito severo, traumatismo reciente o debilidad brusca",
+          "description": "Opción de prueba para verificar el estado de derivación médica prioritaria.",
+          "es_criterio_alarma": true,
+          "category": "general"
+        }
+      ]
+    },
+    {
+      "id": "q_zona_molestia",
+      "order": 2,
+      "question_text": "¿En qué zona corporal se concentra tu molestia principal?",
+      "helper_text": "Selecciona la región donde experimentas mayor incomodidad o limitación.",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "opt_lumbar",
+          "label": "Espalda baja / Zona Lumbar o irradiada hacia pierna",
+          "description": "Lumbagos, tirantez en glúteo o molestia al levantarse.",
+          "es_criterio_alarma": false,
+          "category": "lumbar"
+        },
+        {
+          "id": "opt_cervical",
+          "label": "Cuello / Hombro / Zona Cervical",
+          "description": "Rigidez en trapecios, cuello o dificultad para girar la cabeza.",
+          "es_criterio_alarma": false,
+          "category": "cervical"
+        },
+        {
+          "id": "opt_articular",
+          "label": "Rodilla, Tobillo o Articulaciones de extremidades",
+          "description": "Molestia articular, esguince o incomodidad al apoyar el peso.",
+          "es_criterio_alarma": false,
+          "category": "articular"
+        },
+        {
+          "id": "opt_muscular",
+          "label": "Sobrecarga, Tensión o Contractura Muscular",
+          "description": "Sensación de fatiga muscular postural o deportiva.",
+          "es_criterio_alarma": false,
+          "category": "muscular"
+        }
+      ]
+    },
+    {
+      "id": "q_impacto_cotidiano",
+      "order": 3,
+      "question_text": "¿Qué actividad de tu rutina diaria se ve más afectada?",
+      "helper_text": "Esto ayuda a orientar el objetivo funcional de tu valoración.",
+      "type": "single_choice",
+      "options": [
+        {
+          "id": "opt_dormir",
+          "label": "Dormir, descansar o encontrar postura en la cama",
+          "es_criterio_alarma": false,
+          "category": "general"
+        },
+        {
+          "id": "opt_trabajo",
+          "label": "Permanecer sentado o en pie durante la jornada laboral",
+          "es_criterio_alarma": false,
+          "category": "general"
+        },
+        {
+          "id": "opt_movilidad",
+          "label": "Caminar distancias cotidianas, agacharse o subir escaleras",
+          "es_criterio_alarma": false,
+          "category": "general"
+        },
+        {
+          "id": "opt_deporte",
+          "label": "Entrenar, correr o realizar actividad física deportiva",
+          "es_criterio_alarma": false,
+          "category": "general"
+        }
+      ]
+    },
+    {
+      "id": "q_escala_eva",
+      "order": 4,
+      "question_text": "Intensidad aproximada de tu molestia hoy (Escala EVA del 1 al 10)",
+      "helper_text": "1 es molestia muy leve; 10 es dolor muy intenso. Valoración subjetiva de referencia.",
+      "type": "scale_eva",
+      "options": [
+        {
+          "id": "opt_eva_val",
+          "label": "Escala Numérica",
+          "es_criterio_alarma": false,
+          "category": "general"
+        }
+      ]
+    }
+  ],
+  "result_messages": {
+    "orientativo": {
+      "title": "Información Preliminar Registrada",
+      "badge": "Orientación Inicial Completada",
+      "summary": "De acuerdo con las respuestas proporcionadas en este formulario orientativo, no se identificaron criterios de alerta inmediata para derivación de urgencia.",
+      "disclaimer": "Esta herramienta no constituye un diagnóstico clínico ni sustituye la valoración física por un profesional titulado. Te sugerimos solicitar una cita presencial en Jr. Sociego para una evaluación completa.",
+      "cta_label": "Coordinar Valoración Presencial por WhatsApp"
+    },
+    "alerta": {
+      "title": "Atención Médica Presencial Prioritaria",
+      "badge": "Criterio de Alerta Detectado",
+      "summary": "Has indicado respuestas que sugieren la necesidad de una evaluación médica presencial antes de iniciar sesiones de fisioterapia.",
+      "recommendation": "Por tu seguridad clínica, te recomendamos acudir a un centro de salud o servicio de emergencias (ej. Hospital Regional Virgen de Fátima en Chachapoyas) para descartar patologías agudas o complicaciones neurológicas.",
+      "emergency_notice": "La fisioterapia ambulatoria no reemplaza la atención de urgencias médicas ante síntomas súbitos o severos.",
+      "emergency_phone": "+51 941 996 388"
+    }
+  }
+}

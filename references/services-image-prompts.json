@@ -1,0 +1,29 @@
+{
+  "tool": "built-in image_gen",
+  "prompts": [
+    {
+      "name": "lumbar",
+      "prompt": "Use case: photorealistic-natural. Create one square editorial photograph for a physiotherapy clinic service card in Peru. Bright clean modern rehabilitation room, warm natural daylight, cream and soft sage surroundings, therapist wearing dark teal scrubs, realistic anatomy and hands, natural human skin texture. Close medium framing with treatment area centered, clearly readable in a small square thumbnail and landscape crop. No text, logos, watermark, collage, medical diagrams or glowing pain effects. Respectful fully clothed patients except the relevant treatment area. Subject: An adult patient lying on their side on a treatment table, physiotherapist gently assessing the lower back with one hand at the lumbar area and the other stabilizing the pelvis. Focus unmistakably on lumbar physiotherapy for back pain and sciatica."
+    },
+    {
+      "name": "cuello",
+      "prompt": "Use case: photorealistic-natural. Create one square editorial photograph for a physiotherapy clinic service card in Peru. Bright clean modern rehabilitation room, warm natural daylight, cream and soft sage surroundings, therapist wearing dark teal scrubs, realistic anatomy and hands, natural human skin texture. Close medium framing with treatment area centered, clearly readable in a small square thumbnail and landscape crop. No text, logos, watermark, collage, medical diagrams or glowing pain effects. Respectful fully clothed patients except the relevant treatment area. Subject: Adult seated patient, therapist gently mobilizing the shoulder and assessing the neck, hands on upper trapezius and shoulder, side view with neck and shoulder centered. Clearly cervical and shoulder physiotherapy."
+    },
+    {
+      "name": "esguinces",
+      "prompt": "Use case: photorealistic-natural. Create one square editorial photograph for a physiotherapy clinic service card in Peru. Bright clean modern rehabilitation room, warm natural daylight, cream and soft sage surroundings, therapist wearing dark teal scrubs, realistic anatomy and hands, natural human skin texture. Close medium framing with treatment area centered, clearly readable in a small square thumbnail and landscape crop. No text, logos, watermark, collage, medical diagrams or glowing pain effects. Respectful fully clothed patients except the relevant treatment area. Subject: Close medium photograph of a therapist assessing an adult patient's ankle after a sprain, both hands carefully supporting heel and ankle, patient's lower leg on a padded treatment table. Ankle prominently centered, slight elastic ankle support nearby, no wounds."
+    },
+    {
+      "name": "deportivas",
+      "prompt": "Use case: photorealistic-natural. Create one square editorial photograph for a physiotherapy clinic service card in Peru. Bright clean modern rehabilitation room, warm natural daylight, cream and soft sage surroundings, therapist wearing dark teal scrubs, realistic anatomy and hands, natural human skin texture. Close medium framing with treatment area centered, clearly readable in a small square thumbnail and landscape crop. No text, logos, watermark, collage, medical diagrams or glowing pain effects. Respectful fully clothed patients except the relevant treatment area. Subject: Young adult recreational athlete wearing sports clothes performing a controlled single-leg rehabilitation exercise with a resistance band in a clinic, physiotherapist beside them guiding knee alignment. Framed on athlete and working leg, clearly supervised sports injury rehabilitation."
+    },
+    {
+      "name": "contracturas",
+      "prompt": "Use case: photorealistic-natural. Create one square editorial photograph for a physiotherapy clinic service card in Peru. Bright clean modern rehabilitation room, warm natural daylight, cream and soft sage surroundings, therapist wearing dark teal scrubs, realistic anatomy and hands, natural human skin texture. Close medium framing with treatment area centered, clearly readable in a small square thumbnail and landscape crop. No text, logos, watermark, collage, medical diagrams or glowing pain effects. Respectful fully clothed patients except the relevant treatment area. Subject: Adult patient lying face down comfortably on a treatment table, back appropriately draped with a towel, physiotherapist performing manual myofascial release on upper back and trapezius muscles. Focus on therapist hands applying gentle pressure to muscle, therapeutic clinical context."
+    },
+    {
+      "name": "artrosis",
+      "prompt": "Use case: photorealistic-natural. Create one square editorial photograph for a physiotherapy clinic service card in Peru. Bright clean modern rehabilitation room, warm natural daylight, cream and soft sage surroundings, therapist wearing dark teal scrubs, realistic anatomy and hands, natural human skin texture. Close medium framing with treatment area centered, clearly readable in a small square thumbnail and landscape crop. No text, logos, watermark, collage, medical diagrams or glowing pain effects. Respectful fully clothed patients except the relevant treatment area. Subject: Older adult seated on a treatment table, wearing shorts, physiotherapist gently guiding knee flexion and extension, hands supporting the knee and lower leg. Calm reassuring interaction, focus on stiff knee joint rehabilitation for osteoarthritis."
+    }
+  ]
+}

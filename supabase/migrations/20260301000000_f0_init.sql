@@ -1,0 +1,6 @@
+-- ==============================================================================
+-- CENTRO TERAPÉUTICO SIGLO XXI — MIGRACIÓN INICIAL BASE
+-- FASE F0: Estructura de directorio de migraciones preparada para F1
+-- ==============================================================================
+-- Esta carpeta contendrá el DDL de las 12 tablas normalizadas y las políticas RLS
+-- que se aplicarán en la Fase F1 mediante `supabase db push` o script directo.
