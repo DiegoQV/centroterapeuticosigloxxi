@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 py-3.5 transition-all duration-200 ${
+      className={`sticky top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 py-2.5 transition-all duration-200 ${
         isScrolled ? "shadow-md bg-white/95 backdrop-blur-md" : "shadow-xs"
       }`}
     >
@@ -31,7 +31,7 @@ export default function Navbar() {
             <img
               src="/brand/logo-official-2lines.png"
               alt="Centro Terapéutico Siglo XXI"
-              className="h-10 sm:h-12 w-auto max-w-[190px] sm:max-w-none object-contain group-hover:scale-[1.02] transition-transform duration-200"
+              className="h-10 sm:h-11 w-auto max-w-[190px] sm:max-w-none object-contain group-hover:scale-[1.02] transition-transform duration-200"
             />
           </Link>
 

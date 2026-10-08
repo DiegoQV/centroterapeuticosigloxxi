@@ -27,6 +27,160 @@
   --foreground: #111111;
 }
 
+.public-hero .hero-title {
+  -webkit-text-stroke: 0.3px currentColor;
+}
+
+/* Adaptar el hero al ancho y a la altura útil de las laptops. */
+@media (min-width: 1024px) and (max-width: 1535px) {
+  .contact-section {
+    padding-block: 20px;
+  }
+
+  .contact-header {
+    margin-bottom: 12px;
+  }
+
+  .contact-header h2 {
+    font-size: 42px;
+  }
+
+  .contact-header > p {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  .contact-map {
+    height: 330px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-form-header {
+    margin-bottom: 12px;
+  }
+
+  .contact-form-header h3 {
+    font-size: 28px;
+  }
+
+  .contact-card form > * {
+    margin-block: 0;
+  }
+
+  .contact-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-card input,
+  .contact-card select {
+    padding-block: 8px;
+    min-height: 40px;
+  }
+
+  .contact-submit {
+    padding-top: 4px;
+  }
+
+  .contact-submit button {
+    padding-block: 12px;
+  }
+
+  .equipment-section {
+    padding-block: 16px;
+  }
+
+  .equipment-header {
+    margin-bottom: 12px;
+  }
+
+  .equipment-header h2 {
+    font-size: 42px;
+  }
+
+  .equipment-header p {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  .equipment-tabs {
+    margin-bottom: 16px;
+  }
+
+  .equipment-tabs button {
+    padding-block: 10px;
+  }
+
+  .equipment-image {
+    height: 350px;
+    aspect-ratio: auto;
+  }
+
+  .equipment-details {
+    gap: 10px;
+  }
+
+  .equipment-details > * {
+    margin-block: 0;
+  }
+
+  .equipment-details h3 {
+    font-size: 38px;
+  }
+
+  .equipment-details p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .equipment-action {
+    padding-top: 4px;
+    gap: 12px;
+  }
+
+  .equipment-action button {
+    padding: 12px 24px;
+    flex-shrink: 0;
+  }
+
+  .public-hero .hero-title {
+    font-size: calc(clamp(54px, 4.75vw, 70px) + 4px);
+    -webkit-text-stroke: 0.45px currentColor;
+  }
+
+  .public-hero .hero-copy {
+    max-width: 56%;
+    margin-left: calc(clamp(24px, 3vw, 44px) + 35px);
+  }
+}
+
+@media (min-width: 1024px) and (max-height: 800px) {
+  .public-hero {
+    padding-top: 32px;
+    padding-bottom: 88px;
+  }
+
+  .public-hero .hero-title {
+    font-size: clamp(50px, 8.1svh, 66px);
+    margin-bottom: 20px;
+  }
+
+  .public-hero .hero-copy > p,
+  .public-hero .hero-copy > div:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1535px) and (max-height: 800px) {
+  .public-hero .hero-title {
+    font-size: calc(clamp(50px, 8.1svh, 66px) + 4px);
+  }
+}
+
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans), "Inter", system-ui, -apple-system, sans-serif;

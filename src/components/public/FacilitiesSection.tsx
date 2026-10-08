@@ -28,7 +28,7 @@ export default function FacilitiesSection({ onOpenBooking }: FacilitiesSectionPr
   };
 
   return (
-    <section id="facilities" className="py-20 lg:py-28 bg-[#F6F9F8] relative overflow-hidden">
+    <section id="facilities" className="equipment-section scroll-mt-[69px] py-20 lg:py-28 bg-[#F6F9F8] relative overflow-hidden">
       {/* Luces difusas de fondo */}
       <div
         aria-hidden="true"
@@ -42,7 +42,7 @@ export default function FacilitiesSection({ onOpenBooking }: FacilitiesSectionPr
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Centrado Editorial con Animación */}
         <ScrollReveal direction="up" duration={700}>
-          <div className="text-center max-w-4xl lg:max-w-5xl mx-auto mb-10 md:mb-14">
+          <div className="equipment-header text-center max-w-4xl lg:max-w-5xl mx-auto mb-10 md:mb-14">
             <span className="text-xs font-bold text-emerald-900 tracking-[0.2em] uppercase mb-2 block font-sans">
               {facilities.tag}
             </span>
@@ -57,7 +57,7 @@ export default function FacilitiesSection({ onOpenBooking }: FacilitiesSectionPr
 
         {/* Selector de Pestañas Flotantes (Tabs) con Animación */}
         <ScrollReveal direction="up" delay={150} duration={650}>
-          <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 mb-14 font-sans">
+          <div className="equipment-tabs flex flex-wrap items-center justify-center gap-2.5 sm:gap-3.5 mb-14 font-sans">
             {tabs.map((tab, idx) => {
               const isActive = idx === activeTabIdx;
               return (
@@ -98,7 +98,7 @@ export default function FacilitiesSection({ onOpenBooking }: FacilitiesSectionPr
               />
 
               <div
-                className="relative w-full aspect-[4/3] lg:aspect-[5/4] organic-equipment-mask overflow-hidden shadow-2xl shadow-emerald-950/12 border border-emerald-900/10 group animate-motion-image bg-gray-100"
+                className="equipment-image relative w-full aspect-[4/3] lg:aspect-[5/4] organic-equipment-mask overflow-hidden shadow-2xl shadow-emerald-950/12 border border-emerald-900/10 group animate-motion-image bg-gray-100"
               >
                 <img
                   src={current.image}
@@ -115,7 +115,7 @@ export default function FacilitiesSection({ onOpenBooking }: FacilitiesSectionPr
             </ScrollReveal>
 
             {/* Bloque Derecho: Ficha Técnica Editorial */}
-            <ScrollReveal direction="right" delay={300} duration={750} className="lg:col-span-6 flex flex-col justify-center lg:pl-4 xl:pl-8 space-y-6 sm:space-y-7">
+            <ScrollReveal direction="right" delay={300} duration={750} className="equipment-details lg:col-span-6 flex flex-col justify-center lg:pl-4 xl:pl-8 space-y-6 sm:space-y-7">
               {/* 1. Categoría Clínica */}
               <div className="animate-motion-fade-up">
                 <span className="inline-flex items-center gap-2 text-[11px] font-extrabold text-emerald-900 tracking-[0.22em] uppercase font-sans">
@@ -176,7 +176,7 @@ export default function FacilitiesSection({ onOpenBooking }: FacilitiesSectionPr
               </div>
 
               {/* 6. Nota y Botón de Acción */}
-              <div className="animate-motion-fade-up stagger-5 flex flex-col sm:flex-row sm:items-center justify-between gap-5 pt-4 font-sans">
+              <div className="equipment-action animate-motion-fade-up stagger-5 flex flex-col sm:flex-row sm:items-center justify-between gap-5 pt-4 font-sans">
                 <div className="flex items-center gap-2 text-xs text-gray-800 font-medium">
                   <ShieldCheck className="w-4 h-4 text-emerald-700 flex-shrink-0" />
                   <span>{current.footerNote}</span>

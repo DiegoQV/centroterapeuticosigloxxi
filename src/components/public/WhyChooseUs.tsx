@@ -9,6 +9,13 @@ interface WhyChooseUsProps {
   onOpenBooking: (service?: string) => void;
 }
 
+const laptopPillars = [
+  { title: "01. Evaluación funcional", desc: "Identificamos el origen del dolor y cómo afecta tu movimiento." },
+  { title: "02. Tecnología de apoyo", desc: "Seleccionamos equipos terapéuticos según tu evaluación y necesidades." },
+  { title: "03. Terapia manual y ejercicio", desc: "Combinamos técnicas manuales y ejercicio guiado para recuperar movilidad." },
+  { title: "04. Psicología del dolor", desc: "Te acompañamos a afrontar el dolor persistente y el temor al movimiento." },
+];
+
 export default function WhyChooseUs({ onOpenBooking }: WhyChooseUsProps) {
   const { whyChoose } = clinicData;
   const [isPlaying, setIsPlaying] = useState(true);
@@ -27,13 +34,13 @@ export default function WhyChooseUs({ onOpenBooking }: WhyChooseUsProps) {
   };
 
   return (
-    <section id="about" className="py-20 lg:py-28 bg-[#F8FAF9] relative">
+    <section id="about" className="methodology-section py-20 lg:py-10 2xl:py-28 bg-[#F8FAF9] relative scroll-mt-[69px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center lg:items-start 2xl:items-center">
           {/* Columna Izquierda: Video Clínico de Movilidad Activa con Animación Left */}
           <div className="lg:col-span-6 relative">
             <ScrollReveal direction="left" duration={800}>
-              <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl border-4 border-white group bg-slate-900">
+              <div className="methodology-video relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl border-4 border-white group bg-slate-900">
                 {/* Video en Bucle Continuo de Movilidad y Terapia Activa */}
                 <video
                   ref={videoRef}
@@ -85,24 +92,25 @@ export default function WhyChooseUs({ onOpenBooking }: WhyChooseUsProps) {
           <div className="lg:col-span-6 flex flex-col items-start">
             <ScrollReveal direction="right" duration={750} className="w-full">
               {/* Tag */}
-              <span className="text-xs font-bold text-emerald-800 tracking-wider uppercase mb-2.5 font-sans">
+              <span className="block text-xs font-bold text-emerald-800 tracking-wider uppercase mb-2.5 lg:mb-2 2xl:mb-2.5 font-sans">
                 {whyChoose.tag}
               </span>
 
               {/* Gran Titular */}
-              <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl xl:text-[40px] font-bold text-[#111111] tracking-tight leading-[1.12] mb-5">
+              <h2 className="methodology-title font-serif text-2xl sm:text-3xl lg:text-[34px] 2xl:text-[40px] font-bold text-[#111111] tracking-tight leading-[1.12] mb-5 lg:mb-4 2xl:mb-5">
                 No solo aliviamos el dolor: <br />
                 <span className="text-[#0B3B32]">recuperamos tu movilidad.</span>
               </h2>
 
               {/* Subtítulo */}
-              <p className="text-base md:text-lg text-gray-800 font-medium leading-relaxed mb-6 font-sans">
-                {whyChoose.description}
+              <p className="text-base md:text-lg lg:text-base 2xl:text-lg text-gray-800 font-medium leading-relaxed mb-6 lg:mb-5 2xl:mb-6 font-sans">
+                <span className="lg:hidden 2xl:inline">{whyChoose.description}</span>
+                <span className="hidden lg:inline 2xl:hidden">Evaluación, tecnología y atención personalizada para recuperar tu movilidad.</span>
               </p>
             </ScrollReveal>
 
             {/* 4 Pilares del Método Clínico con Stagger */}
-            <div className="space-y-4 mb-8 w-full font-sans">
+            <div className="space-y-4 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-5 lg:gap-y-5 2xl:block 2xl:space-y-4 mb-8 lg:mb-5 2xl:mb-8 w-full font-sans">
               {whyChoose.details.map((item, idx) => (
                 <ScrollReveal
                   key={idx}
@@ -112,10 +120,12 @@ export default function WhyChooseUs({ onOpenBooking }: WhyChooseUsProps) {
                 >
                   <div className="border-l-2 border-emerald-600 pl-4 py-0.5 hover:border-emerald-400 transition-colors">
                     <h4 className="font-sans font-bold text-sm sm:text-base text-[#111111]">
-                      {item.title}
+                      <span className="lg:hidden 2xl:inline">{item.title}</span>
+                      <span className="hidden lg:inline 2xl:hidden">{laptopPillars[idx]?.title ?? item.title}</span>
                     </h4>
-                    <p className="text-xs sm:text-sm text-gray-700 font-medium mt-0.5 leading-relaxed">
-                      {item.desc}
+                    <p className="text-xs sm:text-sm text-gray-700 font-medium mt-0.5 lg:mt-1.5 2xl:mt-0.5 leading-relaxed">
+                      <span className="lg:hidden 2xl:inline">{item.desc}</span>
+                      <span className="hidden lg:inline 2xl:hidden">{laptopPillars[idx]?.desc ?? item.desc}</span>
                     </p>
                   </div>
                 </ScrollReveal>

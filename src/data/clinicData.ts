@@ -46,6 +46,7 @@ export const clinicData = {
     title: "Tratamientos especializados para cada tipo de dolor",
     subtitle:
       "Abordaje individualizado y riguroso para devolverte la movilidad y bienestar motriz.",
+    subtitleLaptop: "Abordaje individualizado y riguroso para devolverte la movilidad y bienestar.",
     linkText: "Consultar todas las afecciones",
     items: [
       {

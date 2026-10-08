@@ -61,7 +61,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-[calc(100vh-73px)] lg:h-[calc(100vh-73px)] w-full py-10 sm:py-12 lg:py-14 overflow-hidden flex items-center bg-[#F8FAF9]"
+      className="public-hero relative min-h-[calc(100svh-69px)] w-full pt-10 pb-24 sm:pt-12 lg:pt-14 overflow-hidden flex items-center bg-[#F8FAF9]"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -77,7 +77,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             <img
               src={slide.image}
               alt={slide.alt}
-              className="w-full h-full object-cover object-[78%_bottom] md:object-[72%_bottom] lg:object-bottom"
+              className="hero-image w-full h-full object-cover object-[78%_bottom] md:object-[72%_bottom] lg:object-center"
             />
           </div>
         ))}
@@ -88,15 +88,15 @@ export default function Hero({ onOpenBooking }: HeroProps) {
 
       {/* 2. Contenido Principal */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="max-w-xl lg:max-w-2xl flex flex-col items-start">
+        <div className="hero-copy max-w-xl lg:max-w-2xl flex flex-col items-start">
           {/* Insignia Superior */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/95 backdrop-blur-sm border border-gray-300 shadow-xs text-xs sm:text-[12.5px] font-extrabold text-[#0B3B32] tracking-wider mb-6 font-sans">
-            <span className="w-2 h-2 rounded-full bg-emerald-600" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-sm border border-gray-300 shadow-xs text-[10px] sm:text-[11px] font-extrabold text-[#0B3B32] tracking-wider mb-6 font-sans">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
             <span>{hero.tag}</span>
           </div>
 
           {/* Gran Titular Editorial con estilo Garamond */}
-          <h1 className="font-serif text-[40px] sm:text-[52px] md:text-[62px] lg:text-[70px] xl:text-[76px] font-extrabold text-[#0a0a0a] tracking-tight leading-[1.06] mb-6">
+          <h1 className="hero-title font-serif text-[42px] sm:text-[54px] md:text-[64px] lg:text-[72px] xl:text-[78px] font-extrabold text-[#0a0a0a] tracking-tight leading-[1.06] mb-6">
             {hero.titleLine1} <br />
             <span className="text-[#0B3B32]">{hero.titleLine2}</span> <br />
             {hero.titleLine3}

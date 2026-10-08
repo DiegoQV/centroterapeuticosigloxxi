@@ -27,6 +27,15 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   UserCheck,
 };
 
+const imageFocus: Record<string, string> = {
+  "dolor-ciatico-lumbar": "50% 55%",
+  "cuello-hombros": "50% 30%",
+  "esguinces-articulaciones": "50% 65%",
+  "lesiones-deportivas": "50% 60%",
+  "contracturas-tension": "50% 65%",
+  "rigidez-articular-artrosis": "50% 55%",
+};
+
 export default function ServicesSection({ onOpenBooking }: ServicesSectionProps) {
   const { services } = clinicData;
 
@@ -35,21 +44,22 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Encabezado Centrado con animación Fade Up */}
         <ScrollReveal direction="up" duration={700}>
-          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <div className="text-center max-w-3xl lg:max-w-4xl 2xl:max-w-3xl mx-auto mb-12 md:mb-16">
             <span className="text-xs font-bold text-emerald-800 tracking-wider uppercase mb-2 block font-sans">
               • {services.tag} •
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111111] tracking-tight leading-[1.12] mt-2">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[44px] 2xl:text-5xl font-bold text-[#111111] tracking-tight leading-[1.12] mt-2 max-w-3xl mx-auto">
               {services.title}
             </h2>
-            <p className="mt-3 text-base md:text-lg text-gray-700 font-normal max-w-2xl mx-auto leading-relaxed font-sans">
-              {services.subtitle}
+            <p className="mt-3 text-base md:text-lg text-gray-700 font-normal max-w-2xl lg:max-w-none 2xl:max-w-2xl mx-auto leading-relaxed font-sans">
+              <span className="lg:hidden 2xl:inline">{services.subtitle}</span>
+              <span className="hidden lg:inline 2xl:hidden">{services.subtitleLaptop}</span>
             </p>
           </div>
         </ScrollReveal>
 
         {/* Cuadrícula Responsiva de 6 Afecciones con Revelación Escalonada (Staggered) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 my-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6 gap-6 my-10">
           {services.items.map((item, idx) => {
             const Icon = iconMap[item.icon] || Activity;
             return (
@@ -62,11 +72,12 @@ export default function ServicesSection({ onOpenBooking }: ServicesSectionProps)
               >
                 <div className="group bg-white rounded-2xl border border-gray-200/90 shadow-xs hover:shadow-2xl hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between overflow-hidden h-full transform hover:-translate-y-2">
                   {/* Contenedor de Imagen con zoom suave */}
-                  <div className="h-44 w-full overflow-hidden relative bg-slate-100">
+                  <div className="h-60 2xl:h-44 w-full overflow-hidden relative bg-slate-100">
                     <img
                       src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                      alt={`Tratamiento de ${item.title.toLowerCase()} con un fisioterapeuta`}
+                      style={{ objectPosition: imageFocus[item.id] || "center" }}
+                      className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                       onError={(e) => {
                         if (item.remoteImage && e.currentTarget.src !== item.remoteImage) {
                           e.currentTarget.src = item.remoteImage;

@@ -66,7 +66,7 @@ export default function MissionBanner() {
   };
 
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-[#F6F9F8] relative overflow-hidden">
+    <section id="contact" className="contact-section scroll-mt-[69px] py-16 lg:py-24 bg-[#F6F9F8] relative overflow-hidden">
       {/* Halo ambiental suave continuo */}
       <div
         aria-hidden="true"
@@ -75,7 +75,7 @@ export default function MissionBanner() {
 
       {/* 1. Encabezado Editorial con Animación */}
       <ScrollReveal direction="up" duration={700}>
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 mb-10 lg:mb-12">
+        <div className="contact-header relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 mb-10 lg:mb-12">
           <span className="text-xs font-bold text-emerald-900 tracking-[0.2em] uppercase mb-2 block font-sans">
             • {locationContact.tag} •
           </span>
@@ -93,7 +93,7 @@ export default function MissionBanner() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-start">
           {/* Columna Izquierda: Mapa y Datos de Sede con Animación Left */}
           <ScrollReveal direction="left" duration={750} className="order-1 lg:order-1 lg:col-span-6 w-full flex flex-col justify-start">
-            <div className="relative w-full h-[380px] sm:h-[420px] lg:h-[460px] rounded-2xl sm:rounded-[24px] overflow-hidden border border-emerald-950/10 shadow-md bg-slate-100">
+            <div className="contact-map relative w-full h-[380px] sm:h-[420px] lg:h-[460px] rounded-2xl sm:rounded-[24px] overflow-hidden border border-emerald-950/10 shadow-md bg-slate-100">
               <iframe
                 src={sede.mapEmbedUrl}
                 width="100%"
@@ -103,7 +103,7 @@ export default function MissionBanner() {
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"
                 title="Ubicación Centro Terapéutico Siglo XXI"
-                className="w-full h-full map-monochrome-emerald"
+                className="w-full h-full"
               />
             </div>
 
@@ -134,14 +134,15 @@ export default function MissionBanner() {
 
           {/* Columna Derecha: Formulario con Conexión a Base de Datos */}
           <ScrollReveal direction="right" duration={750} delay={150} className="order-2 lg:order-2 lg:col-span-6 w-full flex flex-col justify-start lg:pl-4 xl:pl-6 mt-8 lg:mt-0">
-            <div className="w-full max-w-xl mx-auto lg:mx-0 bg-white p-7 sm:p-9 rounded-3xl border border-emerald-950/10 shadow-lg shadow-emerald-950/5">
+            <div className="contact-card w-full max-w-xl mx-auto lg:mx-0 bg-white p-7 sm:p-9 rounded-3xl border border-emerald-950/10 shadow-lg shadow-emerald-950/5">
               {/* Cabecera del Formulario */}
-              <div className="mb-7">
+              <div className="contact-form-header mb-7">
                 <h3 className="font-serif font-bold text-2xl sm:text-3xl text-[#111111] tracking-tight leading-snug">
                   {form.title}
                 </h3>
                 <p className="text-sm sm:text-base text-gray-600 font-normal mt-1.5 font-sans leading-relaxed">
-                  {form.subtitle}
+                  <span className="lg:hidden 2xl:inline">{form.subtitle}</span>
+                  <span className="hidden lg:inline 2xl:hidden">Déjanos tus datos para coordinar tu cita.</span>
                 </p>
               </div>
 
@@ -274,7 +275,7 @@ export default function MissionBanner() {
                   </div>
 
                   {/* 4. Botón de Envío */}
-                  <div className="pt-4">
+                  <div className="contact-submit pt-4">
                     <button
                       type="submit"
                       disabled={isSubmitting}

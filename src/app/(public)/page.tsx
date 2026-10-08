@@ -27,7 +27,7 @@ export default function Home() {
       {/* 1. Header Institucional con logo oficial y portal paciente */}
       <Navbar />
 
-      <main className="flex-grow">
+      <main className="flex-grow overflow-x-clip">
         {/* 2. Hero Section con carrusel de clínica y tipografía Garamond */}
         <Hero onOpenBooking={handleOpenBooking} />
 
