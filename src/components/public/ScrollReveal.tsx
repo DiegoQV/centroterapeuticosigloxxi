@@ -32,12 +32,6 @@ export default function ScrollReveal({
     const element = elementRef.current;
     if (!element) return;
 
-    // Si el usuario prefiere movimiento reducido, mostrar inmediatamente
-    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setIsVisible(true);
-      return;
-    }
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

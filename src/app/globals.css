@@ -336,22 +336,6 @@ body {
   transform: translate3d(0, 0, 0) scale3d(1, 1, 1) !important;
 }
 
-/* Accessible reduced motion override */
-@media (prefers-reduced-motion: reduce) {
-  .reveal-base,
-  .reveal-up,
-  .reveal-down,
-  .reveal-left,
-  .reveal-right,
-  .reveal-scale,
-  .reveal-fade {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-    animation: none !important;
-  }
-}
-
 .stagger-1 { animation-delay: 70ms; transition-delay: 70ms; }
 .stagger-2 { animation-delay: 140ms; transition-delay: 140ms; }
 .stagger-3 { animation-delay: 210ms; transition-delay: 210ms; }
